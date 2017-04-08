@@ -1,0 +1,85 @@
+body {
+  font-size: 16px;
+  color: #484848;
+}
+
+#nav-toggle {
+  cursor: pointer;
+  top: 4px;
+  position: relative;
+}
+
+#nav-toggle span,
+#nav-toggle span::before,
+#nav-toggle span::after {
+  content: "";
+  background: #484848;
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 25px;
+  transition: all 0.5s;
+}
+
+#nav-toggle span::before {
+  top: -10px;
+}
+
+#nav-toggle span::after {
+  bottom: -10px;
+}
+
+
+/*Change Hamaburger to cross*/
+
+#nav-toggle.active-cross span {
+  background-color: transparent;
+}
+
+#nav-toggle.active-cross span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active-cross span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
+/* Change Hamburger to Left Arrow */
+
+#nav-toggle.active-arrow-left span::before {
+  top: 0;
+  width: 12.5px;
+  transform-origin: left bottom;
+  transform: translateX(-2px) translateY(-2px) rotate(45deg);
+}
+
+#nav-toggle.active-arrow-left span::after {
+  top: 0;
+  width: 12.5px;
+  transform-origin: left top;
+  transform: translateX(-2px) translateY(2px) rotate(-45deg);
+}
+
+
+/* Change Hamburger to Up Arrow*/
+
+#nav-toggle.active-arrow-up span {
+  transform: rotate(90deg);
+}
+
+#nav-toggle.active-arrow-up span::before {
+  top: 0;
+  width: 12.5px;
+  transform-origin: left top;
+  transform: translateX(-2px) translateY(2px) rotate(-45deg);
+}
+
+#nav-toggle.active-arrow-up span::after {
+  top: 0;
+  width: 12.5px;
+  transform-origin: left bottom;
+  transform: translateX(-2px) translateY(-2px) rotate(45deg);
+}
