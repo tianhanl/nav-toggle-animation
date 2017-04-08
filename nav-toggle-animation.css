@@ -1,11 +1,5 @@
-body {
-  font-size: 16px;
-  color: #484848;
-}
-
 #nav-toggle {
   cursor: pointer;
-  top: 4px;
   position: relative;
 }
 
