@@ -1,4 +1,4 @@
-function addNavEffect(effectName) {
+(function addNavEffect(effectName) {
   var open = false;
   var toggleNav = document.getElementById("nav-toggle");
   toggleNav.addEventListener("click", function () {
@@ -10,4 +10,4 @@ function addNavEffect(effectName) {
       open = false;
     }
   })
-}
+})()
